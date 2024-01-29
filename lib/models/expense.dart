@@ -5,7 +5,7 @@ import 'package:uuid/uuid.dart';
 enum Category { food, travel, leisure, work }
 
 //to map the category to icon
-const CategoryIcons = {
+const categoryIcons = {
   Category.food: Icons.lunch_dining,
   Category.work: Icons.work,
   Category.leisure: Icons.movie,

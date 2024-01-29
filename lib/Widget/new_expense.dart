@@ -48,15 +48,15 @@ class _NewExpenseState extends State<NewExpense> {
       showDialog(
         context: context,
         builder: (ctx) => AlertDialog(
-          title: Text("Invalid Input"),
-          content: Text(
+          title: const Text("Invalid Input"),
+          content: const Text(
               "Please make sure a valid title, amount, date, and category was entered"),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text("Ok"),
+              child: const Text("Ok"),
             ),
           ],
         ),
@@ -101,7 +101,7 @@ class _NewExpenseState extends State<NewExpense> {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Expanded(
                         child: TextField(
                           controller: amountController,
@@ -191,11 +191,11 @@ class _NewExpenseState extends State<NewExpense> {
                       ),
                     ],
                   ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 if (width > 600)
                   Row(
                     children: [
-                      Spacer(),
+                      const Spacer(),
                       //----------------------------------------------------------------------------
                       TextButton(
                         onPressed: () {
@@ -231,7 +231,7 @@ class _NewExpenseState extends State<NewExpense> {
                               selectedCategory = value;
                             });
                           }),
-                      Spacer(),
+                      const Spacer(),
                       //----------------------------------------------------------------------------
                       TextButton(
                         onPressed: () {

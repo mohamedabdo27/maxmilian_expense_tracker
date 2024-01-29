@@ -14,14 +14,14 @@ class ExpenseItem extends StatelessWidget {
             expense.title,
             style: Theme.of(context).textTheme.titleLarge,
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Row(
             children: [
               Text('\$${expense.amount.toStringAsFixed(2)}'),
-              Spacer(),
+              const Spacer(),
               Row(
                 children: [
-                  Icon(CategoryIcons[expense.category]),
+                  Icon(categoryIcons[expense.category]),
                   Text(expense.formmatDate)
                 ],
               )

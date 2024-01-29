@@ -55,8 +55,8 @@ class _ExpensesState extends State<Expenses> {
     });
     ScaffoldMessenger.of(context).clearSnackBars();
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text("Expense deleted"),
-      duration: Duration(seconds: 4),
+      content: const Text("Expense deleted"),
+      duration: const Duration(seconds: 4),
       action: SnackBarAction(
           label: "Undo",
           onPressed: () {
@@ -72,7 +72,7 @@ class _ExpensesState extends State<Expenses> {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
 
-    Widget mainContent = Center(
+    Widget mainContent = const Center(
       child: Text("No expenses found, start adding some"),
     );
     if (registerExpenses.isNotEmpty) {
@@ -82,10 +82,10 @@ class _ExpensesState extends State<Expenses> {
       );
     }
     return Scaffold(
-      appBar: AppBar(title: Text("Flutter ExpenseTracker"), actions: [
+      appBar: AppBar(title: const Text("Flutter ExpenseTracker"), actions: [
         IconButton(
           onPressed: openAddNewExpense,
-          icon: Icon(Icons.add),
+          icon: const Icon(Icons.add),
         )
       ]),
       body: width < 600
